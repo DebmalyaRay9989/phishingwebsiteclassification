@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Get in Touch, ​Book an Appointment, INTUITIVE">
+    <meta name="description" content="">
+    <title>Home</title>
+	{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'nicepage.css' %}" media="screen">
+<link rel="stylesheet" type="text/css" href="{% static 'Home.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-5809">
+	{% load static %}
+	<div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-headline u-text u-text-1">
+          <a href="/">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;WEB PHISHING PREDICTION&nbsp;</a>
+        </h3>
+      </div></header>
+    <section class="u-clearfix u-grey-10 u-section-1" id="carousel_7610">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-image u-layout-cell u-size-23 u-image-1" data-image-width="5000" data-image-height="3220">
+                <div class="u-container-layout u-valign-top u-container-layout-1"></div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-palette-1-base u-size-37 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <div class="u-form u-form-1">
+
+						<div class="wrap">
+						  <form method="post" action="" enctype="multipart/form-data">
+							<h1><b><u> </u></b></h1>
+							<br>
+							{% csrf_token %}
+
+							  <div class="search">
+							  <label for="email-a968" class="u-label">Name of the url</label>
+							  <input name="name" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Name of the url">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">Number of Dots present in the url</label>
+							  <input name="NumDots" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Number of Dots present in the url">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">Path Level of the url</label>
+							  <input name="PathLevel" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Path Level of the url (0-16)">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">Number of Dash</label>
+							  <input name="NumDash" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Number of Dash in the url (0-60)">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">Did the url had Number Sensitive Words</label>
+							  <input name="NumSensitiveWords" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Did the url had Number Sensitive Words (0-5)">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">PctExtHyperlinks</label>
+							  <input name="PctExtHyperlinks" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="PctExtHyperlinks value [0-1]">
+							</div>
+							  <br>
+
+							 <div class="search">
+							  <label for="email-a968" class="u-label">PctExtResourceUrls</label>
+							  <input name="PctExtResourceUrls" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="PctExtResourceUrls value [0-1]">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">Did The URL Have Insecured Forms</label>
+							  <select name="InsecureForms" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+								<option selected>Did the url have Insecured Forms</option>
+								<option value="0">No</option>
+								<option value="1">Yes</option>
+								</select>
+							   </div>
+							   <br>
+
+							 <div class="search">
+							  <label for="email-a968" class="u-label">PctNullSelfRedirectHyperlinks</label>
+							  <input name="PctNullSelfRedirectHyperlinks" type="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="PctNullSelfRedirectHyperlinksvalue [0-1]">
+							</div>
+							  <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">FrequentDomainNameMismatch</label>
+							  <select name="FrequentDomainNameMismatch" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+								<option selected>Was there a Frequent Domain Name Mismatch with the url</option>
+								<option value="0">No</option>
+								<option value="1">Yes</option>
+								</select>
+							   </div>
+							   <br>
+
+							 <div class="search">
+							  <label for="email-a968" class="u-label">SubmitInfoToEmail</label>
+							  <select name="SubmitInfoToEmail" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+								<option selected>Was there any "Submit Info To Email" on the url</option>
+								<option value="0">No</option>
+								<option value="1">Yes</option>
+								</select>
+							   </div>
+							   <br>
+
+							<div class="search">
+							  <label for="email-a968" class="u-label">IframeOrFrame</label>
+							  <select name="IframeOrFrame" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+								<option selected>IframeOrFrame on the url</option>
+								<option value="0">No</option>
+								<option value="1">Yes</option>
+								</select>
+							   </div>
+							   <br>
+
+							  <button type="submit" name="pred_button" class="u-btn u-btn-submit u-button-style"> Submit
+									<i class="fa fa-search"></i>
+							  </button>
+						   </form>
+						   {% if response %}
+							  <h3>Is it a phishing site: {{ response }}</h3>
+						   {% else %}
+								<h3>Is it a phishing site: {{ response }}</h3>
+							{% endif %}
+						</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0f0d"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Website&nbsp;</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  
+</body></html>

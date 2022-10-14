@@ -1,0 +1,189 @@
+<html>
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Phishing Prediction</title>
+<style>
+
+body{
+  background-color: #8f8185;
+  
+}
+
+{% comment %}
+
+body{
+    background-color: #8f8187;
+    background-attachment: fixed;
+    background-size: cover;
+}
+{% endcomment %}
+
+div.search {
+  width: 100%;
+  height: 36px;
+  position: relative;
+  display: flex;
+}
+
+input.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 20px;
+}
+
+select.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 20px;
+}
+
+input.searchTerm:focus{
+  color: #00B4CC;
+}
+
+button.searchButton {
+  width: 80px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+div.wrap{
+  width: 60%;
+  position: relative;
+  top: 20%;
+  left: 20%;
+}
+
+body.bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300px;
+    max-height: 700px;
+}
+
+.bg-image[style^="background-image:"][style$=".svg)"] {
+  background-size: 400px 300px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg)
+}
+
+</style>
+</head>
+
+<body> {% comment %} https://www.svgbackgrounds.com/ -> this site is good for bg images {% endcomment %}
+
+<div class="wrap">
+  <form method="post" action="" enctype="multipart/form-data">
+    <h1><b><u> PHISHING  WEBSITE  CLASSIFICATION </u></b></h1>
+    <br>
+    {% csrf_token %}
+
+      <div class="search">
+      <input name="name" type="text" class="searchTerm" placeholder="Name of the url">
+    </div>
+      <br>
+
+    <div class="search">
+      <input name="NumDots" type="text" class="searchTerm" placeholder="Number of Dots present in the url">
+    </div>
+      <br>
+
+    <div class="search">
+      <input name="PathLevel" type="text" class="searchTerm" placeholder="Path Level of the url (0-16)">
+    </div>
+      <br>
+
+    <div class="search">
+      <input name="NumDash" type="text" class="searchTerm" placeholder="Number of Dash in the url (0-60)">
+    </div>
+      <br>
+
+    <div class="search">
+      <input name="NumSensitiveWords" type="text" class="searchTerm" placeholder="Did the url had Number Sensitive Words (0-5)">
+    </div>
+      <br>
+
+    <div class="search">
+      <input name="PctExtHyperlinks" type="text" class="searchTerm" placeholder="PctExtHyperlinks value [0-1]">
+    </div>
+      <br>
+
+     <div class="search">
+      <input name="PctExtResourceUrls" type="text" class="searchTerm" placeholder="PctExtResourceUrls value [0-1]">
+    </div>
+      <br>
+
+    <div class="search">
+      <select name="InsecureForms" class="searchTerm">
+        <option selected>Did the url have Insecured Forms</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+       </div>
+       <br>
+
+     <div class="search">
+      <input name="PctNullSelfRedirectHyperlinks" type="text" class="searchTerm" placeholder="PctNullSelfRedirectHyperlinksvalue [0-1]">
+    </div>
+      <br>
+
+    <div class="search">
+      <select name="FrequentDomainNameMismatch" class="searchTerm">
+        <option selected>Was there a Frequent Domain Name Mismatch with the url</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+       </div>
+       <br>
+
+     <div class="search">
+      <select name="SubmitInfoToEmail" class="searchTerm">
+        <option selected>Was there any "Submit Info To Email" on the url</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+       </div>
+       <br>
+
+    <div class="search">
+      <select name="IframeOrFrame" class="searchTerm">
+        <option selected>IframeOrFrame on the url</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+       </div>
+       <br>
+
+      <button type="submit" name="pred_button" class="searchButton"> Submit
+            <i class="fa fa-search"></i>
+      </button>
+   </form>
+   {% if response %}
+      <h2>Is it a phishing site: {{ response }}</h2>
+   {% else %}
+        <h2>Is it a phishing site: {{ response }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
